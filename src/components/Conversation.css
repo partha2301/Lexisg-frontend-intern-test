@@ -1,0 +1,82 @@
+.conversation-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: 30px auto;
+    border-radius: 15px;
+    padding: 50px;
+    gap: 15px;
+    min-height: 100px;
+
+    animation: fadeInSlideInContainer 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInSlideInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.query, .reply {
+    padding: 10px 15px;
+    max-width: 70%;
+    line-height: 1.8rem;
+    word-wrap: break-word;
+    font-size: 1.15rem;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.query {
+    align-self: flex-end;
+    background-color: #2f2f2f;
+    color: white;
+    border-radius: 15px 15px 0 15px;
+    animation: fadeInSlideInBubble 0.3s ease-out forwards;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.query p {
+    color: white;
+    margin: 0;
+    display: block; 
+    min-height: 1em;
+}
+
+.reply {
+    align-self: flex-start;
+    color: white;
+    border-radius: 15px 15px 15px 0;
+    animation: fadeInSlideInBubble 0.3s ease-out forwards;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.reply p {
+    color: white;
+    margin: 0;
+    display: block; 
+    min-height: 1em;
+    text-align: left;
+}
+
+@keyframes fadeInSlideInBubble {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
