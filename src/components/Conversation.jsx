@@ -35,6 +35,7 @@ const Conversation = ({ queryText, replyText }) => {
         <div className="reply">
           {/* dangerouslySetInnerHTML used here */}
           <p dangerouslySetInnerHTML={{ __html: displayedReply }}></p>
+
         </div>
       )}
     </div>

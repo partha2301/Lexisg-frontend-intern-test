@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './userInterface.css';
 import Conversation from './Conversation';
+// import filePDF from '../assets/file.pdf';
 
 const UserInterface = () => {
   const textareaRef = useRef(null);
@@ -37,7 +38,7 @@ const UserInterface = () => {
       const citationHTML = `
       <br/>Citation:<br/>
       &ldquo; ${response.citations[0].text} &rdquo;<br/>
-      <a href="/assets/file.pdf#page=2#:~:text=Having" target="_blank" rel="noopener noreferrer" style="color: lightblue; text-decoration: underline;">(View Dani_Devi_v_Pritam_Singh.pdf)</a>`;
+      <a href="${window.location.origin}/Lexisg-frontend-intern-test/assets/file.pdf#page=2" target="_blank" rel="noopener noreferrer" style="color: lightblue; text-decoration: underline;">View Dani_Devi_v_Pritam_Singh.pdf</a>`;
       setSubmittedReply(response.answer + citationHTML);
       setShowConversation(true);
       setInputText('');
